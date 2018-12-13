@@ -135,4 +135,4 @@ if __name__ == "__main__":
     print('saving post-trained model:', save_name)
     print('finished training.')
 
-print('finished: DCNN.py')
+print('finished: train_DCNN.py')
