@@ -21,7 +21,7 @@ acceptable) that contains endo-diastolic (ed), mid-systolic (mid), and endo-syst
 and es for B image channle with Python3.5 programming language with PIL and
 numpy libraries.  
   
-Please train with train_DCNN.py. By default it uses ResNet50. When train_DCNN.py is executed, training is performed using the image data in data_folder/train, and the post-trained internal parameter is saved in the current directory. Next, run test_DCNN.py. Reading the post-trained internal parameter saved in the current directory and classify the test data (please move the post-trained internal parameter not used for analysis to another directory).  
+Please train with train_DCNN.py. By default it uses ResNet50. When train_DCNN.py is executed, training is performed using the image data in data_folder/train (80% for training, 20% for validation), and the post-trained internal parameter is saved in the current directory. Next, run test_DCNN.py. Reading the post-trained internal parameter saved in the current directory and classify the test data in data_folder/test (please move the post-trained internal parameter not used for analysis to another directory).  
   
 These codes were used with
    OS: Ubuntu 14.04LTS
