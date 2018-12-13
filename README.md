@@ -8,7 +8,7 @@ Before using the codes, you should prepare image data at "/data_folder" dir.
   
 /data_folder/train/Norm  
 /data_folder/train/LAD  
-/data_folder/train/LCXD  
+/data_folder/train/LCX  
 /data_folder/train/RCA  
   
 /data_folder/test/Norm  
