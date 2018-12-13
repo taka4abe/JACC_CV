@@ -1,4 +1,4 @@
-This is the part of the codes used for the article entitled "A Deep Learning
+These are the part of the codes used for the article entitled "A Deep Learning
 Approach for Assessment of Regional Wall Motion Abnormality from
 Echocardiographic Images" for JACC CV imaging.
 
@@ -20,7 +20,7 @@ systolic (ed) phases. We put ed for R (red) color image channel, mid for G,
 and es for B image channle with Python3.5 programming language with PIL and
 numpy libraries.
 
-This code was used with
+These codes were used with
    OS: Ubuntu 14.04LTS
    Programming language: Python 3.5 Anaconda
    Deep Learning library: tensorflow-gpu 1.4.1, Keras 2.1.5
