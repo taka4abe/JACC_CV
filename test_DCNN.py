@@ -126,3 +126,5 @@ for dir_name in os.listdir("data_folder/test"):
             label_printer = 'RCA'
         elif label == 3:
             label_printer = 'Norm'
+
+print('finished test_DCNN.py')
