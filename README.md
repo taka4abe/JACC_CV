@@ -4,7 +4,7 @@ Echocardiographic Images" for JACC CV imaging.
   
 license: MIT  
   
-Before using this code, we should prepare image data at "/data_folder" dir.
+Before using the codes, you should prepare image data at "/data_folder" dir.
   
 /data_folder/train/Norm  
 /data_folder/train/LAD  
