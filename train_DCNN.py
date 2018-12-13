@@ -4,17 +4,17 @@
 # Approach for Assessment of Regional Wall Motion Abnormality from
 # Echocardiographic Images" for JACC CV imaging.
 #
-# Before using this code, we should prepare image data at "/data_folder" dir.
+# Before using this code, please prepare image data at "./data_folder" dir.
 #
-# /data_folder/train/Norm
-# /data_folder/train/LAD
-# /data_folder/train/LCXD
-# /data_folder/train/RCA
+# ./data_folder/train/Norm
+# ./data_folder/train/LAD
+# ./data_folder/train/LCXD
+# ./data_folder/train/RCA
 #
-# /data_folder/test/Norm
-# /data_folder/test/LAD
-# /data_folder/test/LCX
-# /data_folder/test/RCA
+# ./data_folder/test/Norm
+# ./data_folder/test/LAD
+# ./data_folder/test/LCX
+# ./data_folder/test/RCA
 #
 # Each dir should have echocardiographic images (.png is recommended and .jpg
 # acceptable) that contains endo-diastolic, mid-systolic, and endo-systolic
