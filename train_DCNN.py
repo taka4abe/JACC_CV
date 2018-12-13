@@ -26,7 +26,9 @@
 #    OS: Ubuntu 14.04LTS
 #    Programming language: Python 3.5 Anaconda
 #    Deep Learning library: tensorflow-gpu 1.4.1, Keras 2.1.5
+#                           CUDA toolkit 8.0, CuDNN v5.1
 #    Python libraries: numpy 1.14.2, Pillow 5.0.0
+#
 #
 # If NeuralNet == "Xception":
 #     this code takes about 4 min for training (100 epoches, 320 train/valid)
