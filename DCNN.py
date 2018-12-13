@@ -37,12 +37,9 @@ import numpy as np
 from datetime import datetime
 from PIL import Image
 from keras.models import Sequential
-from keras.layers import Activation, Conv2D, Dense, Dropout, Convolution2D, Flatten, MaxPooling2D
+from keras.layers import Activation, Dense, Dropout
 from keras.utils.np_utils import to_categorical
-from keras.optimizers import SGD, Adagrad, Adam, Adamax, Nadam
-from keras.layers.normalization import BatchNormalization
-from keras.initializers import RandomNormal
-from keras.preprocessing.image import ImageDataGenerator
+from keras.optimizers import Adam
 
 # to select which neuralnetwork to use
 
