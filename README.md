@@ -4,20 +4,20 @@ Echocardiographic Images" for JACC CV imaging.
   
 license: MIT  
   
-Before using the codes, you should prepare image data at "/data_folder" dir.
+Before using the codes, please prepare image data at "./data_folder" dir.
   
-/data_folder/train/Norm  
-/data_folder/train/LAD  
-/data_folder/train/LCX  
-/data_folder/train/RCA  
+./data_folder/train/Norm  
+./data_folder/train/LAD  
+./data_folder/train/LCX  
+./data_folder/train/RCA  
   
-/data_folder/test/Norm  
-/data_folder/test/LAD  
-/data_folder/test/LCX  
-/data_folder/test/RCA  
+./data_folder/test/Norm  
+./data_folder/test/LAD  
+./data_folder/test/LCX  
+./data_folder/test/RCA  
   
 Each dir should have echocardiographic images (.png is recommended and .jpg
-acceptable) that contains endo-diastolic (ed), mid-systolic (mid), and endo-systolic (es) phases. We put endo-diastolic image for R (red) color image channel, mid-systolic for Green and endo-systolic for Blue image channle with Python3.5 programming language with PIL and
+acceptable) that contains endo-diastolic, mid-systolic, and endo-systolic phases. We put endo-diastolic image for Red color image channel, mid-systolic for Green and endo-systolic for Blue image channle with Python3.5 programming language with PIL and
 numpy libraries.  
   
 Please train with train_DCNN.py. By default it uses ResNet50. When train_DCNN.py is executed, training is performed using the image data in data_folder/train (80% for training, 20% for validation), and the post-trained internal parameter is saved in the current directory. Next, run test_DCNN.py. Reading the post-trained internal parameter saved in the current directory and classify the test data in data_folder/test (please move the post-trained internal parameter not used for analysis to another directory).  
