@@ -26,6 +26,7 @@
 #    OS: Ubuntu 14.04LTS
 #    Programming language: Python 3.5 Anaconda
 #    Deep Learning library: tensorflow-gpu 1.4.1, Keras 2.1.5
+#                           CUDA toolkit 8.0, CuDNN v5.1
 #    Python libraries: numpy 1.14.2, Pillow 5.0.0
 
 import os, keras
@@ -94,7 +95,7 @@ try:
 except:
     print("\n__error!!__\n__fainled to load pre-trained model!!__\n")
 
-# making data
+# making data and test
 image_list = []
 label_list = []
 
@@ -110,11 +111,15 @@ for dir_name in os.listdir("data_folder/test"):
         label = 2
     elif dir_name == "Norm":
         label = 3
-
+        
+    # test
     for file_name in os.listdir(dir_test):
         label_list.append(label)
         filepath = dir_test + "/" + file_name
-        image = np.array(Image.open(filepath).resize((224, 224)))
+        if NeuralNet == 'Xception':
+            image = np.array(Image.open(filepath).resize((128, 128)))
+        else:
+            image = np.array(Image.open(filepath).resize((224, 224)))
         result = model.predict_classes(np.array([image / 255]))
         print(filepath, "label:", label, "result:", result[0])
         if  label == 0:
