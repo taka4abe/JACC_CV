@@ -23,8 +23,8 @@ numpy libraries.
 Please train with train_DCNN.py. By default it uses ResNet50. Training is performed using the image data in data_folder/train (80% for training, 20% for validation), and the post-trained internal parameter is saved in the current directory. Next, please run test_DCNN.py. This code reads the post-trained internal parameter saved in the current directory and it classifies the test data in data_folder/test (please move the post-trained internal parameter not used for analysis to another directory).  
   
 These codes were used with  
-<div>   </div>OS: Ubuntu 14.04LTS  
-<div>   </div>   Programming language: Python 3.5 Anaconda  
-<div>   </div>   Deep Learning library: tensorflow-gpu 1.4.1, Keras 2.1.5  
-<div>   </div>   Python libraries: numpy 1.14.2, Pillow 5.0.0  
-<div>   </div>   CUDA toolkit 8.0, CuDNN v5.1
+   OS: Ubuntu 14.04LTS  
+   Programming language: Python 3.5 Anaconda  
+   Deep Learning library: tensorflow-gpu 1.4.1, Keras 2.1.5  
+   Python libraries: numpy 1.14.2, Pillow 5.0.0  
+   CUDA toolkit 8.0, CuDNN v5.1
