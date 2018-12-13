@@ -25,6 +25,6 @@ Please train with train_DCNN.py. By default it uses ResNet50. Training is perfor
 These codes were used with  
    OS: Ubuntu 14.04LTS  
    Programming language: Python 3.5 Anaconda  
-   Deep Learning library: tensorflow-gpu 1.4.1, Keras 2.1.5  
+   Deep Learning library: tensorflow-gpu 1.4.1, Keras 2.1.5 
+   CUDA toolkit 8.0, CuDNN v5.1 
    Python libraries: numpy 1.14.2, Pillow 5.0.0  
-   CUDA toolkit 8.0, CuDNN v5.1
