@@ -27,10 +27,6 @@
 #    Programming language: Python 3.5 Anaconda
 #    Deep Learning library: tensorflow-gpu 1.4.1, Keras 2.1.5
 #    Python libraries: numpy 1.14.2, Pillow 5.0.0
-#
-# If NeuralNet == "Xception":
-#     this code takes about 4 min for training (100 epoches, 320 train/valid)
-#     with core i7 6850K, RAM 256GB, NVMe SSD w 3.5" HDD, 1080ti.
 
 import os, keras
 import numpy as np
