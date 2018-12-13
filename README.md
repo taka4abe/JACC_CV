@@ -4,7 +4,7 @@ Echocardiographic Images" for JACC CV imaging.
 
 Before using this code, we should prepare image data at "/data_folder" dir.
 
-/data_folder/train/Norm br
+/data_folder/train/Norm  
 /data_folder/train/LAD
 /data_folder/train/LCXD
 /data_folder/train/RCA
