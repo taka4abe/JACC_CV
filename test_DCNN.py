@@ -17,11 +17,11 @@
 # /data_folder/test/RCA
 #
 # Each dir should have echocardiographic images (.png is recommended and .jpg
-# acceptable) that contains endo-diastolic (ed), mid-systolic (mid), and endo-
-# systolic (es) phases. We put ed for R (red) color image channel, mid for G,
-# and es for B image channle with Python3.5 programming language with PIL and
-# numpy libraries.
-
+# acceptable) that contains endo-diastolic, mid-systolic, and endo-systolic
+# phases. We put endo-diastolic for red color image channel, mid-systolic for 
+# Green and endo-systolic for Blue image channle with Python3.5 programming 
+# language with PIL and numpy libraries.
+#
 # This code was used with
 #    OS: Ubuntu 14.04LTS
 #    Programming language: Python 3.5 Anaconda
