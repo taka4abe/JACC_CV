@@ -3,7 +3,7 @@
 # This is the part of the codes used for the article entitled "A Deep Learning
 # Approach for Assessment of Regional Wall Motion Abnormality from
 # Echocardiographic Images" for JACC CV imaging.
-
+#
 # Before using this code, we should prepare image data at "/data_folder" dir.
 #
 # /data_folder/train/Norm
