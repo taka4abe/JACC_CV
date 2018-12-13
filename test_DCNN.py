@@ -15,7 +15,6 @@
 # ./data_folder/test/LAD
 # ./data_folder/test/LCX
 # ./data_folder/test/RCA
-
 #
 # Each dir should have echocardiographic images (.png is recommended and .jpg
 # acceptable) that contains endo-diastolic, mid-systolic, and endo-systolic
