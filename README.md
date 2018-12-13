@@ -15,8 +15,7 @@ Before using this code, we should prepare image data at "/data_folder" dir.
 /data_folder/test/RCA  
   
 Each dir should have echocardiographic images (.png is recommended and .jpg
-acceptable) that contains endo-diastolic (ed), mid-systolic (mid), and endo-
-systolic (ed) phases. We put ed for R (red) color image channel, mid for G,
+acceptable) that contains endo-diastolic (ed), mid-systolic (mid), and endo-systolic (es) phases. We put ed for R (red) color image channel, mid for G,
 and es for B image channle with Python3.5 programming language with PIL and
 numpy libraries.  
   
