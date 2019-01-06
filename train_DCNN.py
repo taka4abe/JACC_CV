@@ -82,59 +82,58 @@ for dir_name in os.listdir("data_folder/train"):
 image_list = np.array(image_list)
 label_list = to_categorical(label_list)
 
-if __name__ == "__main__":
-    #making neural network
-    if NeuralNet == 'VGG16':
-        print('NeuralNetwork: VGG16.\nILSVRC top-1 accuracy of 0.715')
-        DCNN = keras.applications.vgg16.VGG16(
-            include_top=True, input_tensor=None, pooling=None, classes=1000)
-    elif NeuralNet == 'VGG19':
-        print('NeuralNetwork: VGG16.\nILSVRC top-1 accuracy of 0.727')
-        DCNN = keras.applications.vgg19.VGG19(
-            include_top=True, input_tensor=None, pooling=None, classes=1000)
-    elif NeuralNet == 'ResNet50':
-        print('NeuralNetwork: ResNet50.\nILSVRC top-1 accuracy of 0.759')
-        DCNN = keras.applications.resnet50.ResNet50(
-            include_top=True, input_tensor=None, pooling=None, classes=1000)
-    elif NeuralNet == 'DenseNet201':
-        print('NeuralNetwork: DenseNet201.\nILSVRC top-1 accuracy of 0.770')
-        DCNN = keras.applications.rdensenet.DenseNet201(
-            include_top=True, input_tensor=None, pooling=None, classes=1000)
-    elif NeuralNet == 'InceptionV3':
-        print('NeuralNetwork: InceptionV3.\nILSVRC top-1 accuracy of 0.788')
-        DCNN = keras.applications.inception_v3.InceptionV3(
-            include_top=True, input_tensor=None, pooling=None, classes=1000)
-    elif NeuralNet == 'Xception':
-        print('NeuralNetwork: Xception.\nILSVRC top-1 accuracy of 0.790')
-        DCNN = keras.applications.xception.Xception(
-            include_top=True, input_tensor=None, pooling=None, classes=1000)
-    elif NeuralNet == 'IncResV2':
-        print('NeuralNetwork: Inception-ResNet-V2.\nILSVRC top-1 accuracy of 0.804')
-        DCNN = keras.applications.inception_resnet_v2.InceptionResNetV2(
+#making neural network
+if NeuralNet == 'VGG16':
+    print('NeuralNetwork: VGG16.\nILSVRC top-1 accuracy of 0.715')
+    DCNN = keras.applications.vgg16.VGG16(
         include_top=True, input_tensor=None, pooling=None, classes=1000)
-    else:
-        print('error, no neural network.')
+elif NeuralNet == 'VGG19':
+    print('NeuralNetwork: VGG16.\nILSVRC top-1 accuracy of 0.727')
+    DCNN = keras.applications.vgg19.VGG19(
+        include_top=True, input_tensor=None, pooling=None, classes=1000)
+elif NeuralNet == 'ResNet50':
+    print('NeuralNetwork: ResNet50.\nILSVRC top-1 accuracy of 0.759')
+    DCNN = keras.applications.resnet50.ResNet50(
+        include_top=True, input_tensor=None, pooling=None, classes=1000)
+elif NeuralNet == 'DenseNet201':
+    print('NeuralNetwork: DenseNet201.\nILSVRC top-1 accuracy of 0.770')
+    DCNN = keras.applications.rdensenet.DenseNet201(
+        include_top=True, input_tensor=None, pooling=None, classes=1000)
+elif NeuralNet == 'InceptionV3':
+    print('NeuralNetwork: InceptionV3.\nILSVRC top-1 accuracy of 0.788')
+    DCNN = keras.applications.inception_v3.InceptionV3(
+        include_top=True, input_tensor=None, pooling=None, classes=1000)
+elif NeuralNet == 'Xception':
+    print('NeuralNetwork: Xception.\nILSVRC top-1 accuracy of 0.790')
+    DCNN = keras.applications.xception.Xception(
+        include_top=True, input_tensor=None, pooling=None, classes=1000)
+elif NeuralNet == 'IncResV2':
+    print('NeuralNetwork: Inception-ResNet-V2.\nILSVRC top-1 accuracy of 0.804')
+    DCNN = keras.applications.inception_resnet_v2.InceptionResNetV2(
+    include_top=True, input_tensor=None, pooling=None, classes=1000)
+else:
+    print('error, no neural network.')
 
-    opt = Adam(lr = 0.0001)
+opt = Adam(lr = 0.0001)
 
-    model = Sequential()
-    model.add((DCNN))
-    model.add(Dropout(0.5))
-    model.add(Dense(4))
-    model.add(Activation("softmax"))
-    model.compile(loss="categorical_crossentropy",
-                  optimizer=opt, metrics=["accuracy"])
+model = Sequential()
+model.add((DCNN))
+model.add(Dropout(0.5))
+model.add(Dense(4))
+model.add(Activation("softmax"))
+model.compile(loss="categorical_crossentropy",
+              optimizer=opt, metrics=["accuracy"])
 
-    #training
-    print('training')
-    model.fit(image_list, label_list,
-              epochs=1, batch_size=16, validation_split=0.2)
+#training
+print('training')
+model.fit(image_list, label_list,
+          epochs=1, batch_size=16, validation_split=0.2)
 
-    #saving post-trained model
-    prefix = datetime.now().strftime("%Y"+"_"+"%m%d"+"_"+"%H%M")
-    save_name = NeuralNet + '_' + prefix + '.h5'
-    model.save_weights(save_name)
-    print('saving post-trained model:', save_name)
-    print('finished training.')
+#saving post-trained model
+prefix = datetime.now().strftime("%Y"+"_"+"%m%d"+"_"+"%H%M")
+save_name = NeuralNet + '_' + prefix + '.h5'
+model.save_weights(save_name)
+print('saving post-trained model:', save_name)
+print('finished training.')
 
 print('finished: train_DCNN.py')
