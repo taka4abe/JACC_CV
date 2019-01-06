@@ -95,7 +95,7 @@ try:
 except:
     print("\n__error!!__\n__fainled to load pre-trained model!!__\n")
 
-# making data and test
+# making data
 image_list = []
 label_list = []
 
