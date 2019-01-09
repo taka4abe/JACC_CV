@@ -18,8 +18,8 @@
 #
 # Each dir should have echocardiographic images (.png is recommended and .jpg
 # acceptable) that contains endo-diastolic, mid-systolic, and endo-systolic
-# phases. We put endo-diastolic for red color image channel, mid-systolic for 
-# Green and endo-systolic for Blue image channle with Python3.5 programming 
+# phases. We put endo-diastolic for red color image channel, mid-systolic for
+# Green and endo-systolic for Blue image channle with Python3.5 programming
 # language with PIL and numpy libraries.
 #
 # This code was used with
@@ -101,7 +101,6 @@ label_list = []
 
 for dir_name in os.listdir("data_folder/test"):
     dir_test = "data_folder/test/" + dir_name
-    label = 0
 
     if dir_name == "LAD":
         label = 0
@@ -111,7 +110,9 @@ for dir_name in os.listdir("data_folder/test"):
         label = 2
     elif dir_name == "Norm":
         label = 3
-        
+    else:
+        label == "label_error"
+
     # test
     for file_name in os.listdir(dir_test):
         label_list.append(label)
@@ -122,13 +123,5 @@ for dir_name in os.listdir("data_folder/test"):
             image = np.array(Image.open(filepath).resize((224, 224)))
         result = model.predict_classes(np.array([image / 255]))
         print(filepath, "label:", label, "result:", result[0])
-        if  label == 0:
-            label_printer = 'LAD'
-        elif label == 1:
-            label_printer = 'LCX'
-        elif label == 2:
-            label_printer = 'RCA'
-        elif label == 3:
-            label_printer = 'Norm'
 
 print('finished test_DCNN.py')
