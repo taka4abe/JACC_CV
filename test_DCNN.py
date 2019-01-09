@@ -63,7 +63,7 @@ elif NeuralNet == 'ResNet50':
         include_top=True, input_tensor=None, pooling=None, classes=1000)
 elif NeuralNet == 'DenseNet201':
     print('NeuralNetwork: DenseNet201.\n ILSVRC top-1 accuracy of 0.770\n')
-    DCNN = keras.applications.rdensenet.DenseNet201(
+    DCNN = keras.applications.densenet.DenseNet201(
         include_top=True, input_tensor=None, pooling=None, classes=1000)
 elif NeuralNet == 'InceptionV3':
     print('NeuralNetwork: InceptionV3.\n ILSVRC top-1 accuracy of 0.788\n')
