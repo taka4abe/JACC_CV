@@ -127,7 +127,7 @@ model.compile(loss="categorical_crossentropy",
 #training
 print('training')
 model.fit(image_list, label_list,
-          epochs=1, batch_size=16, validation_split=0.2)
+          epochs=100, batch_size=16, validation_split=0.2)
 
 #saving post-trained model
 prefix = datetime.now().strftime("%Y"+"_"+"%m%d"+"_"+"%H%M")
