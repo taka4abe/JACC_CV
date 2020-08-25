@@ -28,3 +28,5 @@ These codes were used with
    Deep Learning library: tensorflow-gpu 1.4.1, Keras 2.1.5 
    CUDA toolkit 8.0, CuDNN v5.1 
    Python libraries: numpy 1.14.2, Pillow 5.0.0  
+   
+This code was written by a person who hold an e-mail account: taka4abe@gmail.com
