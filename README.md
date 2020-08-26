@@ -30,3 +30,4 @@ These codes were used with
    Python libraries: numpy 1.14.2, Pillow 5.0.0  
    
 This code was written by a person who hold an e-mail account: taka4abe@gmail.com
+ref: https://imaging.onlinejacc.org/content/13/2_Part_1/374.abstract
