@@ -1,4 +1,5 @@
 # This is the code which achieved better diagnosablity compared with JACC_CV model (https://imaging.onlinejacc.org/content/13/2_Part_1/374.abstract), to detect cardiac wall motion abnormality.
+# Ubuntu 18.4LTS with Python 3.6, pyenv, Keras2, tf-gpu ver2.
 
 input_img = Input(shape = shape)
 
