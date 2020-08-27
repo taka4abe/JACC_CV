@@ -1,6 +1,5 @@
 # This is the code which achieved better diagnosablity compared with JACC_CV model (https://imaging.onlinejacc.org/content/13/2_Part_1/374.abstract), to detect cardiac wall motion abnormality.
 
-from keras.layers import Concatenate
 input_img = Input(shape = shape)
 
 def conv_block(x):
